@@ -13,3 +13,5 @@ print(index)
 print(python.find("n")) # 문자의 인덱스
 # print(python.index("Java"))
 print(python.count("n")) # 문자의 개수
+print(python.split()) # 문자열 나눔
+print(python.swapcase()) # 대소문자 바꿈
