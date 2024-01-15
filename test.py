@@ -1,18 +1,17 @@
-def get_air_quality(air):
-    if 0 <= air <= 30:
-        print('좋음')
-        return air
-    elif 31 <= air <= 80:
-        print('보통')
-        return air
-    elif 81 <= air <= 150:
-        print('나쁨')
-        return air
-    elif 151 <= air:
-        print('매우 나쁨')
-        return air
-    else:
-        print('오류')
+class ParkingManager:
+    def __init__(self, capacity):
+        self.capacity = capacity
+        self.count = 0
+        print(f'총 {capacity}대를 등록할 수 있습니다.')
 
-get_air_quality(15)
+    def register(self):
+        if self.count>=self.capacity:
+            print('더 이상 등록할 수 없습니다.')
+            return
+        self.count+=1
+        print(f'차량 신규 등록{self.count}/{self.capacity}')
 
+
+manager = ParkingManager(3)
+for i in range(6):
+    manager.register()
